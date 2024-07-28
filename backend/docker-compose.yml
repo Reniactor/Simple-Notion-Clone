@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:13.5
+    environment:
+      POSTGRES_USER: renia
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: mydb
+    ports:
+      - '6500:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
